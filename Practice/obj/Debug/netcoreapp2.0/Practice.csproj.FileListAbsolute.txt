@@ -1,0 +1,10 @@
+C:\GitRepository\DotNetCore\Practice\bin\Debug\netcoreapp2.0\Practice.deps.json
+C:\GitRepository\DotNetCore\Practice\bin\Debug\netcoreapp2.0\Practice.runtimeconfig.json
+C:\GitRepository\DotNetCore\Practice\bin\Debug\netcoreapp2.0\Practice.runtimeconfig.dev.json
+C:\GitRepository\DotNetCore\Practice\bin\Debug\netcoreapp2.0\Practice.dll
+C:\GitRepository\DotNetCore\Practice\bin\Debug\netcoreapp2.0\Practice.pdb
+C:\GitRepository\DotNetCore\Practice\obj\Debug\netcoreapp2.0\Practice.csproj.CoreCompileInputs.cache
+C:\GitRepository\DotNetCore\Practice\obj\Debug\netcoreapp2.0\Practice.AssemblyInfoInputs.cache
+C:\GitRepository\DotNetCore\Practice\obj\Debug\netcoreapp2.0\Practice.AssemblyInfo.cs
+C:\GitRepository\DotNetCore\Practice\obj\Debug\netcoreapp2.0\Practice.dll
+C:\GitRepository\DotNetCore\Practice\obj\Debug\netcoreapp2.0\Practice.pdb
