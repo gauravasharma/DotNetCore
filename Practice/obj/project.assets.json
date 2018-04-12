@@ -12542,11 +12542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitRepository\\DotNetCore\\Practice\\Practice.csproj",
+      "projectUniqueName": "C:\\Repository\\Practice\\Practice.csproj",
       "projectName": "Practice",
-      "projectPath": "C:\\GitRepository\\DotNetCore\\Practice\\Practice.csproj",
+      "projectPath": "C:\\Repository\\Practice\\Practice.csproj",
       "packagesPath": "C:\\Users\\gauravasharma\\.nuget\\packages\\",
-      "outputPath": "C:\\GitRepository\\DotNetCore\\Practice\\obj\\",
+      "outputPath": "C:\\Repository\\Practice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
