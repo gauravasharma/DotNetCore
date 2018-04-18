@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using sample1.Service.Interface;
+using sample1.Service.Implementation;
+    
 
 namespace sample1
 {
@@ -15,6 +18,8 @@ namespace sample1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IRestaurantRepository,RestaurantRepository >();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,12 +30,14 @@ namespace sample1
                 app.UseDeveloperExceptionPage();
             }
             
-            app.UseWelcomePage();
+            //app.UseWelcomePage();
+            app.UseMvc();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            // app.Run(async (context) =>
+            // {
+            //     await context.Response.WriteAsync("Hello World!");
+            // });
+            app.UseWelcomePage();
         }
     }
 }
