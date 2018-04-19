@@ -22,5 +22,13 @@ namespace sample1.Controller
           var data=_restaunrantRepository.GetAll(id);
           return new OkObjectResult(data);
         }
+
+        [HttpPost]
+        [Route("create")]
+        public IActionResult CreateOrUpdate([FromBody]Restaurant restaurant)
+        {
+           return new OkResult();
+        }
+
   }
 }
