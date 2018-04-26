@@ -26,7 +26,7 @@ namespace sample1.Controller
         [HttpPost]
         [Route("create")]
         public IActionResult CreateOrUpdate([FromBody]Restaurant restaurant)
-        {
+        { 
            return new OkResult();
         }
 
