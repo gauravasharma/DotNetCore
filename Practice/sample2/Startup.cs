@@ -4,10 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using sample2.EntityFramework;
+using sample2.Services.Interface;
+using Sample2.Services.Implementation;
 
 namespace sample2
 {
@@ -15,14 +19,18 @@ namespace sample2
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var data=_configuration.GetConnectionString("ADSSDatabase");
+            services.AddDbContext<DataContext>(
+                options => options.UseSqlServer(_configuration.GetConnectionString("ADSSDatabase")));
+            services.AddScoped<IDataElementRepository, DataElementRepository>();
             services.AddMvc();
         }
 

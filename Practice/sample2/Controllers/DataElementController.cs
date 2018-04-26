@@ -3,17 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using sample2.Models;
+using sample2.Services.Interface;
 
 namespace sample2.Controllers
 {
     [Route("api/[controller]")]
     public class DataElementController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private IDataElementRepository _dataElementRepository;
+
+        public DataElementController(IDataElementRepository dataElementRepository)
         {
-            return new string[] { "Element1", "Element2" };
+            _dataElementRepository=dataElementRepository;
+        }
+
+        // GET api/dataelement
+        [HttpGet]
+        public IActionResult Get()
+        {
+            try{
+                 var data=_dataElementRepository.GetAll().ToList();
+                 return new OkObjectResult(data);
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex.Message);
+                return new NoContentResult();
+            }
+           
+            
+           // return new string[] { "Element1", "Element2" };`
         }
 
         // GET api/values/5
